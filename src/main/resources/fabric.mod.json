@@ -1,0 +1,31 @@
+{
+	"schemaVersion": 1,
+	"id": "smoothgui",
+	"version": "${version}",
+	"name": "SmoothGui",
+	"description": "Extension for sgui that adds configurable widgets",
+	"authors": [
+		"corgi in tights"
+	],
+	"contact": {
+		"homepage": "https://github.com/corgi-in-tights/smoothgui",
+		"sources": "https://github.com/corgi-in-tights/smoothgui"
+	},
+	"license": "MIT",
+	"icon": "assets/smoothgui/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.reyaan.smoothgui.SmoothGui"
+		]
+	},
+	"mixins": [
+		"smoothgui.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.6",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"sgui": ">=1.2.2+1.20"
+	}
+}
