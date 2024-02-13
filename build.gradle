@@ -58,14 +58,21 @@ jar {
 	}
 }
 
-// configure the maven publication
+// configure the maven publish plugin
 publishing {
 	publications {
-		mavenJava(MavenPublication) {
+		maven(MavenPublication) {
 			from components.java
 		}
 	}
 
 	repositories {
+		maven {
+			url mvnModsUrl
+			credentials {
+				username mvnModsUsername
+				password mvnModsPassword
+			}
+		}
 	}
 }
