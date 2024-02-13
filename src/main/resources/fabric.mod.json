@@ -12,16 +12,12 @@
 		"sources": "https://github.com/corgi-in-tights/smoothgui"
 	},
 	"license": "MIT",
-	"icon": "assets/smoothgui/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"dev.reyaan.smoothgui.SmoothGui"
 		]
 	},
-	"mixins": [
-		"smoothgui.mixins.json"
-	],
 	"depends": {
 		"fabricloader": ">=0.15.6",
 		"minecraft": "~1.20.1",
