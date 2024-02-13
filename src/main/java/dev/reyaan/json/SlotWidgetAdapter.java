@@ -1,13 +1,10 @@
-package dev.reyaan.smoothgui.json;
+package dev.reyaan.json;
 
 import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
-import dev.reyaan.smoothgui.api.SlotWidgetAPI;
-import dev.reyaan.smoothgui.widgets.SlotWidget;
+import dev.reyaan.api.SlotWidgetAPI;
+import dev.reyaan.widgets.SlotWidget;
 
 import java.lang.reflect.Type;
-import java.util.Map;
-import java.util.TreeMap;
 
 public class SlotWidgetAdapter implements JsonSerializer<SlotWidget>, JsonDeserializer<SlotWidget> {
     @Override

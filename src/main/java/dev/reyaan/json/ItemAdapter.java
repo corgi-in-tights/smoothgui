@@ -1,4 +1,4 @@
-package dev.reyaan.smoothgui.json;
+package dev.reyaan.json;
 
 import com.google.gson.*;
 import net.minecraft.item.Item;

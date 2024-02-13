@@ -1,14 +1,12 @@
-package dev.reyaan.smoothgui.widgets;
+package dev.reyaan.widgets;
 
 import com.google.gson.annotations.Expose;
-import dev.reyaan.smoothgui.SimpleWidgetGui;
-import dev.reyaan.smoothgui.SlotWidgetIcon;
+import dev.reyaan.SimpleWidgetGui;
+import dev.reyaan.SlotWidgetIcon;
 import eu.pb4.sgui.api.ClickType;
-import eu.pb4.sgui.api.elements.GuiElement;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import net.minecraft.server.network.ServerPlayerEntity;
 
-import java.util.LinkedHashMap;
 import java.util.List;
 
 public class SlotWidget {

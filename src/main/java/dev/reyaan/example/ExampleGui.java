@@ -1,9 +1,9 @@
-package dev.reyaan.smoothgui.example;
+package dev.reyaan.example;
 
-import dev.reyaan.smoothgui.GuiWidget;
-import dev.reyaan.smoothgui.SimpleWidgetGui;
-import dev.reyaan.smoothgui.widgets.SlotWidget;
-import dev.reyaan.smoothgui.SlotWidgetIcon;
+import dev.reyaan.GuiWidget;
+import dev.reyaan.SimpleWidgetGui;
+import dev.reyaan.widgets.SlotWidget;
+import dev.reyaan.SlotWidgetIcon;
 import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.item.Items;
 import net.minecraft.screen.ScreenHandlerType;

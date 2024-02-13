@@ -1,8 +1,7 @@
-package dev.reyaan.smoothgui.api;
+package dev.reyaan.api;
 
-import dev.reyaan.smoothgui.json.SlotWidgetAdapter;
-import dev.reyaan.smoothgui.widgets.IteratingSlotWidget;
-import dev.reyaan.smoothgui.widgets.SlotWidget;
+import dev.reyaan.widgets.IteratingSlotWidget;
+import dev.reyaan.widgets.SlotWidget;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package dev.reyaan.smoothgui;
+package dev.reyaan;
 
 import com.google.gson.annotations.Expose;
 import com.mojang.brigadier.StringReader;

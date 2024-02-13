@@ -1,4 +1,4 @@
-package dev.reyaan.smoothgui.utils;
+package dev.reyaan.utils;
 
 import com.google.gson.annotations.Expose;
 import org.apache.commons.lang3.reflect.FieldUtils;

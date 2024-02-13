@@ -1,7 +1,7 @@
-package dev.reyaan.smoothgui;
+package dev.reyaan;
 
-import dev.reyaan.smoothgui.api.SlotWidgetAPI;
-import dev.reyaan.smoothgui.example.ExampleSearchWidget;
+import dev.reyaan.api.SlotWidgetAPI;
+import dev.reyaan.example.ExampleSearchWidget;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
