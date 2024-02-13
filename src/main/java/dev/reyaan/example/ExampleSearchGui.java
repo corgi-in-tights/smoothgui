@@ -1,7 +1,7 @@
-package dev.reyaan.example;
+package dev.reyaan.smoothgui.example;
 
-import dev.reyaan.SimpleWidgetGui;
-import dev.reyaan.SlotWidgetIcon;
+import dev.reyaan.smoothgui.SimpleWidgetGui;
+import dev.reyaan.smoothgui.SlotWidgetIcon;
 import eu.pb4.sgui.api.gui.AnvilInputGui;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;

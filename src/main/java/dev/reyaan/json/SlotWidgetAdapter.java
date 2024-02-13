@@ -1,8 +1,8 @@
-package dev.reyaan.json;
+package dev.reyaan.smoothgui.json;
 
 import com.google.gson.*;
-import dev.reyaan.api.SlotWidgetAPI;
-import dev.reyaan.widgets.SlotWidget;
+import dev.reyaan.smoothgui.api.SlotWidgetAPI;
+import dev.reyaan.smoothgui.widgets.SlotWidget;
 
 import java.lang.reflect.Type;
 
