@@ -1,9 +1,9 @@
-package dev.reyaan;
+package dev.reyaan.smoothgui;
 
 import com.google.gson.reflect.TypeToken;
-import dev.reyaan.json.GuiSerializer;
-import dev.reyaan.utils.WidgetDataUtils;
-import dev.reyaan.widgets.SlotWidget;
+import dev.reyaan.smoothgui.json.GuiSerializer;
+import dev.reyaan.smoothgui.utils.WidgetDataUtils;
+import dev.reyaan.smoothgui.widgets.SlotWidget;
 import eu.pb4.sgui.api.gui.SimpleGui;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.server.network.ServerPlayerEntity;

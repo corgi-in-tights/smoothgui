@@ -1,4 +1,4 @@
-package dev.reyaan;
+package dev.reyaan.smoothgui;
 
 import java.lang.annotation.*;
 

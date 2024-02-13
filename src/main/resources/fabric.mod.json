@@ -15,7 +15,7 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"dev.reyaan.SmoothGui"
+			"dev.reyaan.smoothgui.SmoothGui"
 		]
 	},
 	"depends": {

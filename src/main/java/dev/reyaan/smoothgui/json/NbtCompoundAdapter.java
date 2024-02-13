@@ -1,4 +1,4 @@
-package dev.reyaan.json;
+package dev.reyaan.smoothgui.json;
 
 import com.google.gson.*;
 import com.mojang.brigadier.StringReader;

@@ -1,8 +1,8 @@
-package dev.reyaan.json;
+package dev.reyaan.smoothgui.json;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import dev.reyaan.widgets.SlotWidget;
+import dev.reyaan.smoothgui.widgets.SlotWidget;
 import net.minecraft.item.Item;
 import net.minecraft.nbt.NbtCompound;
 

@@ -1,9 +1,9 @@
-package dev.reyaan.example;
+package dev.reyaan.smoothgui.example;
 
 import com.google.gson.annotations.Expose;
-import dev.reyaan.SimpleWidgetGui;
-import dev.reyaan.SlotWidgetIcon;
-import dev.reyaan.widgets.SlotWidget;
+import dev.reyaan.smoothgui.SimpleWidgetGui;
+import dev.reyaan.smoothgui.SlotWidgetIcon;
+import dev.reyaan.smoothgui.widgets.SlotWidget;
 import eu.pb4.placeholders.api.PlaceholderContext;
 import eu.pb4.sgui.api.ClickType;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;

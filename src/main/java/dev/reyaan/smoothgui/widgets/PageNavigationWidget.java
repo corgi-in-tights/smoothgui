@@ -1,7 +1,7 @@
-package dev.reyaan.widgets;
+package dev.reyaan.smoothgui.widgets;
 
-import dev.reyaan.SimpleWidgetGui;
-import dev.reyaan.SlotWidgetIcon;
+import dev.reyaan.smoothgui.SimpleWidgetGui;
+import dev.reyaan.smoothgui.SlotWidgetIcon;
 import eu.pb4.sgui.api.ClickType;
 import net.minecraft.server.network.ServerPlayerEntity;
 
