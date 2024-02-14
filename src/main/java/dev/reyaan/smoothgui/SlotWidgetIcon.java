@@ -6,6 +6,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import eu.pb4.placeholders.api.PlaceholderContext;
 import eu.pb4.placeholders.api.Placeholders;
 import eu.pb4.placeholders.api.TextParserUtils;
+import eu.pb4.placeholders.api.parsers.PatternPlaceholderParser;
 import eu.pb4.sgui.api.elements.GuiElementBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -18,6 +19,7 @@ import net.minecraft.text.Text;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 public class SlotWidgetIcon {
     @Expose
@@ -29,6 +31,8 @@ public class SlotWidgetIcon {
     @Expose
     public final List<String> placeholderLore;
     private NbtCompound nbt;
+
+    public static Pattern PLACEHOLDER_PATTERN = PatternPlaceholderParser.PREDEFINED_PLACEHOLDER_PATTERN;
 
 
     public static SlotWidgetIcon of(Item item, String title) {
@@ -92,14 +96,14 @@ public class SlotWidgetIcon {
     public static Text parseText(String s, PlaceholderContext context, Map<String, Text> map) {
         Text f = TextParserUtils.formatText(s);
         Text defaultPlaceholderText = Placeholders.parseText(
-                f, context, Placeholders.PREDEFINED_PLACEHOLDER_PATTERN
+                f, context, PLACEHOLDER_PATTERN
         );
-        return Placeholders.parseText(defaultPlaceholderText, Placeholders.PREDEFINED_PLACEHOLDER_PATTERN, map);
+        return Placeholders.parseText(defaultPlaceholderText, PLACEHOLDER_PATTERN, map);
     }
 
     public static Text parseTextUnformatted(String s, PlaceholderContext context, Map<String, Text> map) {
-        Text defaultPlaceholderText = Placeholders.parseText(Text.of(s), context, Placeholders.PREDEFINED_PLACEHOLDER_PATTERN);
-        return Placeholders.parseText(defaultPlaceholderText, Placeholders.PREDEFINED_PLACEHOLDER_PATTERN, map);
+        Text defaultPlaceholderText = Placeholders.parseText(Text.of(s), context, PLACEHOLDER_PATTERN);
+        return Placeholders.parseText(defaultPlaceholderText, PLACEHOLDER_PATTERN, map);
     }
 
 }
