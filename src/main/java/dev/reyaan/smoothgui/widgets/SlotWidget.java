@@ -9,7 +9,7 @@ import net.minecraft.server.network.ServerPlayerEntity;
 
 import java.util.List;
 
-public class SlotWidget {
+public class SlotWidget extends BaseSlotWidget {
     @Expose
     public int defaultState = 0;
     @Expose
@@ -24,14 +24,11 @@ public class SlotWidget {
     protected int state = -1;
 
     public SlotWidget(String id, int index, List<SlotWidgetIcon> states, ServerPlayerEntity player, SimpleWidgetGui gui) {
-        this.id = id;
-        this.index = index;
-        this.player = player;
-        this.gui = gui;
-
+        super(id, index, player, gui);
         this.states = states;
     }
 
+    @Override
     public void construct() {
         GuiElementBuilder builder = createBuilder();
         builder.setCallback(this::callback);
@@ -45,11 +42,6 @@ public class SlotWidget {
         if (state == -1) state = defaultState;
         SlotWidgetIcon icon = this.states.get(state);
         return icon.createBuilder(player);
-    }
-
-    public void updateData(ServerPlayerEntity player, SimpleWidgetGui gui) {
-        this.player = player;
-        this.gui = gui;
     }
 
     public int getCurrentState() {

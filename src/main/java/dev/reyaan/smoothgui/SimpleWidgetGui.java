@@ -3,7 +3,7 @@ package dev.reyaan.smoothgui;
 import com.google.gson.reflect.TypeToken;
 import dev.reyaan.smoothgui.json.GuiSerializer;
 import dev.reyaan.smoothgui.utils.WidgetDataUtils;
-import dev.reyaan.smoothgui.widgets.SlotWidget;
+import dev.reyaan.smoothgui.widgets.BaseSlotWidget;
 import eu.pb4.sgui.api.gui.SimpleGui;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.server.network.ServerPlayerEntity;
@@ -41,8 +41,8 @@ public class SimpleWidgetGui extends SimpleGui {
 
         // setup
         final File file = getDataFilePath().toFile();
-        final List<SlotWidget> serializedObjects = new ArrayList<>();
-        final ArrayList<SlotWidget> toDeserialize = new ArrayList<>();
+        final List<BaseSlotWidget> serializedObjects = new ArrayList<>();
+        final ArrayList<BaseSlotWidget> toDeserialize = new ArrayList<>();
 
         if (enableSerialization) {
             // @TODO cache objects?? if its static it cant be passed...
@@ -51,12 +51,12 @@ public class SimpleWidgetGui extends SimpleGui {
             if (this.getCachedWidgets() != null) {
                 serializedObjects.addAll(this.getCachedWidgets());
             } else {
-                TypeToken<List<SlotWidget>> type = new TypeToken<>() {};
+                TypeToken<List<BaseSlotWidget>> type = new TypeToken<>() {};
 
                 // deserialize default file (or leave serializedObjects empty)
                 if (file.exists()) {
                     try {
-                        List<SlotWidget> z = GuiSerializer.PRIMARY_GSON.fromJson(new FileReader(file), type);
+                        List<BaseSlotWidget> z = GuiSerializer.PRIMARY_GSON.fromJson(new FileReader(file), type);
                         serializedObjects.addAll(z);
                     } catch (IOException e) {
                         throw new RuntimeException(e);
@@ -70,7 +70,7 @@ public class SimpleWidgetGui extends SimpleGui {
             field.setAccessible(true);
             try {
                 Object object = field.get(this);
-                if (object instanceof SlotWidget widget) {
+                if (object instanceof BaseSlotWidget widget) {
 
                     // the actual serialization core
                     if (enableSerialization && field.getAnnotation(GuiWidget.class).serialize()) {
@@ -108,7 +108,7 @@ public class SimpleWidgetGui extends SimpleGui {
 
         if (!toDeserialize.isEmpty()) {
             try (FileWriter writer = new FileWriter(file)) {
-                Type type = new TypeToken<ArrayList<SlotWidget>>() {}.getType();
+                Type type = new TypeToken<ArrayList<BaseSlotWidget>>() {}.getType();
                 String s = GuiSerializer.PRIMARY_GSON.toJson(toDeserialize, type);
                 writer.write(s);
             } catch (IOException e) {
@@ -128,14 +128,14 @@ public class SimpleWidgetGui extends SimpleGui {
     /**
      * @return A list of cached widgets, use SimpleWidgetGui#setCachedWidgets to find out
      */
-    public List<SlotWidget> getCachedWidgets() {
+    public List<BaseSlotWidget> getCachedWidgets() {
         return null;
     }
 
     /**
      * @param cachedWidgets A list of cached/possibly serialized widgets
      */
-    public void setCachedWidgets(List<SlotWidget> cachedWidgets) {
+    public void setCachedWidgets(List<BaseSlotWidget> cachedWidgets) {
     }
 
     /**
