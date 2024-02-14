@@ -15,5 +15,6 @@ public class IteratingSlotWidget extends SlotWidget {
     public void callback(ClickType type) {
         this.state += 1;
         if (this.state >= this.states.size()) this.state = 0;
+        this.construct();
     }
 }
