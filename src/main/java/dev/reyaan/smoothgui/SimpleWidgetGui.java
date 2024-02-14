@@ -17,7 +17,7 @@ import java.util.*;
 
 public class SimpleWidgetGui extends SimpleGui {
     protected int page = 0;
-    int maxPages;
+    protected int maxPages;
 
     public boolean enableSerialization;
     /**
@@ -37,7 +37,7 @@ public class SimpleWidgetGui extends SimpleGui {
      * Fetch and construct all the annotated widgets
      */
     public void initialize() {
-        this.maxPages = findInitialMaxPages();
+        updateMaxPages();
 
         // setup
         final File file = getDataFilePath().toFile();
@@ -156,11 +156,15 @@ public class SimpleWidgetGui extends SimpleGui {
         this.setPage(this.getPage() + step);
     }
 
-    public int findInitialMaxPages() {
-        return 1;
+    public void updateMaxPages() {
+        this.setMaxPages(1);
     }
 
     public int getMaxPages() {
         return maxPages;
+    }
+
+    public void setMaxPages(int m) {
+        this.maxPages = m;
     }
 }
