@@ -159,4 +159,8 @@ public class SimpleWidgetGui extends SimpleGui {
     public int findInitialMaxPages() {
         return 1;
     }
+
+    public int getMaxPages() {
+        return maxPages;
+    }
 }

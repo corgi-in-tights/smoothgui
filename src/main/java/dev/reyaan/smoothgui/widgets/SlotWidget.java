@@ -51,4 +51,9 @@ public class SlotWidget {
         this.player = player;
         this.gui = gui;
     }
+
+    public int getCurrentState() {
+        if (state == -1) state = defaultState;
+        return this.state;
+    }
 }
