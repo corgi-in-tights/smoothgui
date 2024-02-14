@@ -8,7 +8,6 @@ import java.util.List;
 
 public class WidgetDataUtils {
     public static void copyExposedFields(Object source, Object destination) {
-//        Field[] fields = source.getClass().getDeclaredFields();
         List<Field> fields = FieldUtils.getFieldsListWithAnnotation(source.getClass(), Expose.class);
 
         for (Field field : fields) {
@@ -16,7 +15,6 @@ public class WidgetDataUtils {
 
             try {
                 Object value = field.get(source);
-                System.out.println("Setting field " + field.getName() + " from " + source + " to " + destination + " with a value of " + value);
                 field.set(destination, value);
             } catch (IllegalAccessException e) {
                 throw new RuntimeException(e);
