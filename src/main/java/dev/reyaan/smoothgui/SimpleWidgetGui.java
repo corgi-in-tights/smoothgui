@@ -149,7 +149,7 @@ public class SimpleWidgetGui extends SimpleGui {
     }
 
     public void setPage(int page) {
-        this.page = page;
+        this.page = Math.max(0, Math.min(page, getMaxPages()-1));
     }
 
     public void stepPage(int step) {

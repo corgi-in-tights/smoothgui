@@ -1,6 +1,7 @@
 package dev.reyaan.smoothgui.api;
 
 import dev.reyaan.smoothgui.widgets.IteratingSlotWidget;
+import dev.reyaan.smoothgui.widgets.PageNavigationWidget;
 import dev.reyaan.smoothgui.widgets.SlotWidget;
 
 import java.util.HashMap;
@@ -15,6 +16,7 @@ public class SlotWidgetAPI {
         if (!registeredDefaults) {
             registerType("default", SlotWidget.class);
             registerType("iterating", IteratingSlotWidget.class);
+            registerType("page_navigation", PageNavigationWidget.class);
             registeredDefaults = true;
         }
     }
