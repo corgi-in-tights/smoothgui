@@ -84,6 +84,7 @@ public class SimpleWidgetGui extends SimpleGui {
                                         serializedObjects.remove(match);
                                         // copy all exposed fields over to default widget
                                         WidgetDataUtils.copyExposedFields(match, widget);
+                                        widget.updateData(player, this);
                                     });
                         }
                         // OR append to toDeserialize array
