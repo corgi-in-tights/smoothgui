@@ -14,13 +14,7 @@ public class SlotWidget extends BaseSlotWidget {
     public int defaultState = 0;
     @Expose
     protected List<SlotWidgetIcon> states;
-    @Expose
-    public String id;
-    @Expose
-    public int index;
 
-    protected ServerPlayerEntity player;
-    protected SimpleWidgetGui gui;
     protected int state = -1;
 
     public SlotWidget(String id, int index, List<SlotWidgetIcon> states, ServerPlayerEntity player, SimpleWidgetGui gui) {
